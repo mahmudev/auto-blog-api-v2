@@ -61,7 +61,7 @@ async function run() {
       }
     });
 
-    cron.schedule("*/30 * * * *", async () => {
+    cron.schedule("*/1 * * * *", async () => {
       try {
         const oldestDraft = await blogsCollection.findOne(
           { status: "draft" },
